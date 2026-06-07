@@ -928,13 +928,13 @@ body{
         grid-template-columns:1fr 1fr;
         gap:15px;
         width:90%;
-        margin:40px auto;
+        margin:30px auto;
         justify-items:center;
     }
 
     .hero-photo{
         position:static !important;
-        width:140px;
+        width:100px;
         height:180px;
         object-fit:cover;
         transform:rotate(0deg) !important;
@@ -949,6 +949,7 @@ body{
 
     .title{
         font-size:4rem;
+        top:30px
     }
 
     .sub{
@@ -1237,8 +1238,8 @@ body{
     #finalBtn{
         left:50%;
         right:auto;
-        bottom:30px;
-       font-size:20px;
+        bottom:10px;
+        font-size:20px;
         opacity:0;
         pointer-events:none;
 
