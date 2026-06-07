@@ -923,14 +923,42 @@ body{
         overflow-x:hidden;
     }
 
+    .hero-gallery{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+        width:90%;
+        margin:40px auto;
+        justify-items:center;
+    }
+
+    .hero-photo{
+        position:static !important;
+        width:140px;
+        height:180px;
+        object-fit:cover;
+        transform:rotate(0deg) !important;
+    }
+
+    .hp1,.hp2,.hp3,.hp4{
+        top:auto;
+        left:auto;
+        right:auto;
+        bottom:auto;
+    }
+
     .title{
-        margin-top:50px;
-        font-size:50px;
+        font-size:4rem;
     }
 
     .sub{
-        font-size:30px;
+        font-size:2.3rem;
     }
+
+    .hp1{transform:rotate(-6deg)!important;}
+    .hp2{transform:rotate(6deg)!important;}
+    .hp3{transform:rotate(-4deg)!important;}
+    .hp4{transform:rotate(4deg)!important;}
 
     .scrapTitle{
         font-size:38px;
@@ -1027,18 +1055,7 @@ body{
     
     /* ---------- Hero Photos ---------- */
 
-    .hero-photo{
-        width:90px;
-        height:130px;
-    }
-
-    .hp1,.hp3{
-        top:320px;
-    }
-
-    .hp2,.hp4{
-        top:560px;
-    }
+   
 
     /* ---------- Choice Page ---------- */
 
@@ -1220,7 +1237,7 @@ body{
     #finalBtn{
         left:50%;
         right:auto;
-        bottom:100px;
+        bottom:30px;
        font-size:20px;
         opacity:0;
         pointer-events:none;
