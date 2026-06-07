@@ -93,6 +93,18 @@ body{
 .back{
     left:30px;
 }
+#finalBtn{
+    opacity:0;
+    pointer-events:none;
+    transform:translateY(20px);
+    transition:all 1.2s ease;
+}
+
+#finalBtn.show{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateY(0);
+}
 
 /* ---------------- This is for you ---------------- */
 
@@ -242,6 +254,14 @@ body{
 .pola:hover{
     transform:scale(1.08) rotate(0deg) !important;
     z-index:100;
+}
+.pola{
+    opacity:0;
+    transition:opacity .8s ease;
+}
+
+.pola.show{
+    opacity:1;
 }
 /* Row 1 */
 
@@ -545,7 +565,7 @@ body{
 }
 
 .hearts::before{
-    left:20%;
+    left:25%;
     top:25%;
 }
 
@@ -747,7 +767,7 @@ body{
     font-family:'Caveat',cursive;
     font-size:28px;
     color:#9b5a72;
-    margin-top:15px;
+    margin-top:30px;
 }
 .bouquet{
     animation:bloom 3s ease-in-out infinite;
@@ -813,4 +833,450 @@ body{
 .footer-credit.show{
     opacity:.85;
     transform:translateY(0);
+}
+#ending{
+    min-height:100vh;
+    text-align:center;
+}
+
+#ending.active{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.ending-box{
+    max-width:700px;
+    padding:20px;
+}
+
+.ending-line{
+    color:#8a4d62;
+    font-family:'Caveat',cursive;
+    animation:fadeIn 1.5s ease;
+}
+#line1,
+#line2{
+    font-size:80px;
+}
+#line3{
+    font-size:70px;
+}
+#line4{
+    font-size:70px;
+}
+.hidden{
+    display:none;
+}
+
+.birthday{
+    font-size:70px;
+    font-family:'Great Vibes',cursive;
+}
+
+.final-text{
+    font-size:52px;
+}
+
+.restart{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    font-size:24px;
+    color:#8a4d62;
+    cursor:pointer;
+
+    opacity:0;
+    pointer-events:none;
+    transition:all 1s ease;
+}
+
+.restart.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+/* ================================================= */
+/* MOBILE RESPONSIVE (DO NOT AFFECT DESKTOP) */
+/* ================================================= */
+
+@media (max-width: 768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .title{
+        margin-top:50px;
+        font-size:50px;
+    }
+
+    .sub{
+        font-size:30px;
+    }
+
+    .scrapTitle{
+        font-size:38px;
+        top:35px;
+    }
+
+    .next,
+    .back{
+        font-size:24px;
+        bottom:20px;
+    }
+
+    .next{
+        right:20px;
+    }
+
+    .back{
+        left:20px;
+    }
+    .hearts::before,
+    .hearts::after{
+        content:"💗";
+        position:absolute;
+        font-size:35px;
+        animation:float 4s ease-in-out infinite;
+    }
+
+    .hearts::before{
+        left:45%;
+        top:55%;
+    }
+
+    .hearts::after{
+        right:82%;
+        top:90%;
+        animation-delay:2s;
+        display:none;
+    }
+        /* ---------- First Page ---------- */
+
+    .camera{
+        width:260px;
+        top:51%;
+        left:55%
+    }
+
+    .vinyl{
+        width:190px;
+        left:62%;
+        top:38%;
+    }
+
+    .paper{
+        width:120px;
+        left:37%;
+        top:32%;
+    }
+
+    .clap{
+        width:180px;
+        left:0%;
+        top:38%;
+    }
+
+    .star{
+        width:160px;
+        left:24%;
+        top:64%;
+    }
+
+    .ticket{
+        width:140px;
+        left:57%;
+        top:63%;
+    }
+
+    .leftnote,
+    .rightnote{
+        font-size:20px;
+    }
+
+    .leftnote{
+        left:300px;
+        top:140px;
+    }
+
+    .rightnote{
+        left:18px;
+        top:630px;
+    }
+    
+    /* ---------- Hero Photos ---------- */
+
+    .hero-photo{
+        width:90px;
+        height:130px;
+    }
+
+    .hp1{
+        top:250px;
+        left:40px;
+        width:140px;
+    }
+
+    .hp2{
+        top:500px;
+        left:65px;
+        width:150px;
+    }
+
+    .hp3{
+        top:250px;
+        right:30px;
+        width:160px;
+    }
+
+    .hp4{
+        top:500px;
+        right:50px;
+        width:150px;
+    }
+
+    /* ---------- Choice Page ---------- */
+
+    .choices{
+        flex-direction:column;
+        gap:40px;
+        margin-top:70px;
+    }
+
+    .choice{
+        width:130px;
+    }
+
+    .item span{
+        font-size:20px;
+    }
+
+    /* ---------- Bouquet ---------- */
+
+    .bouquet{
+        width:180px;
+        top:30px;
+    }
+
+    .caption{
+        position:static;
+        width:90%;
+        margin: 40px auto 15px auto;
+        text-align:center;
+        font-size:20px;
+    }
+
+    /* ---------- Memory Board ---------- */
+
+    .memory-board{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+        padding:20px 0 100px;
+        min-height:auto;
+    }
+
+    .pola{
+        position:relative !important;
+        top:auto !important;
+        left:auto !important;
+        right:auto !important;
+        
+    }
+
+    .pola img{
+        width:240px;
+    }
+
+    @keyframes mobileFloat{
+        0%,100%{
+            transform:translateY(0);
+        }
+        50%{
+            transform:translateY(-12px);
+        }
+    }
+    @keyframes floatLeft{
+        0%,100%{ transform:rotate(-2deg) translateY(0); }
+        50%{ transform:rotate(-3deg) translateY(-12px); }
+    }
+
+    @keyframes floatRight{
+        0%,100%{ transform:rotate(3deg) translateY(0); }
+        50%{ transform:rotate(3deg) translateY(-12px); }
+    }
+
+    .p1,.p3,.p6,.p8,
+    .p9,.p11,.p14,.p16{
+        animation:floatLeft 4s ease-in-out infinite;
+    }
+
+    .p2,.p4,.p5,.p7,
+    .p10,.p12,.p13,.p15{
+        animation:floatRight 4s ease-in-out infinite;
+    }
+    
+    .pola{
+        opacity:0;
+        transition:all .8s ease;
+    }
+
+
+    .pola.show{
+        opacity:1;
+        transform:translateY(0);
+    }
+    
+        /* ---------- Letter ---------- */
+
+    .letter{
+        width:88%;
+        padding:20px;
+        margin:60px auto;
+    }
+
+    #typed{
+        font-size:24px;
+    }
+
+    /* ---------- Pins ---------- */
+
+    .pin,
+    .pin-right{
+        width:120px;
+        display: none;
+    }
+
+    .pin{
+        left:10px;
+    }
+
+    .pin-right{
+        right:10px;
+    }
+
+    .tape,
+    .tape-right{
+        width:45px;
+        height:16px;
+    }
+
+    /* ---------- Decorations ---------- */
+
+    .bow{
+        font-size:34px;
+    }
+
+    .bow1{
+        left:20px;
+        top:50px;
+    }
+
+    .bow2{
+        right:20px;
+        top:50px;
+    }
+
+    .doodle{
+        font-size:28px;
+    }
+
+    .d1{
+        left:15%;
+        top:220px;
+    }
+
+    .d2{
+        right:15%;
+        top:110px;
+    }
+
+    .d3{
+        left:8%;
+        top:550px;
+    }
+
+    .d4{
+        right:8%;
+        top:650px;
+    }
+
+    #music{
+        width:48px;
+        height:48px;
+        font-size:22px;
+    }
+
+    .footer-credit{
+        font-size:18px;
+        padding:0 10px;
+    }
+    #finalBtn{
+        left:50%;
+        right:auto;
+        bottom:10px;
+
+        opacity:0;
+        pointer-events:none;
+
+        transform:translateX(-50%) translateY(20px);
+
+        transition:all 1.2s ease;
+    }
+
+    #finalBtn.show{
+        opacity:1;
+        pointer-events:auto;
+
+        transform:translateX(-50%) translateY(0);
+    }
+    .ending-box{
+        width:90%;
+        padding:20px;
+    }
+
+    #line1,
+    #line2{
+        font-size:58px !important;
+        line-height:1.2;
+    }
+
+    #line3{
+        font-size:38px !important;
+        line-height:1.3;
+    }
+
+    #line4{
+        font-size:48px !important;
+        line-height:1.5;
+    }
+
+    #line5{
+        font-size:48px !important;
+        line-height:1.4;
+    }
+
+    .birthday{
+        font-size:58px !important;
+        line-height:1.2;
+    }
+
+    .restart{
+        font-size:20px;
+        right:20px;
+        bottom:20px;
+    }
+
 }

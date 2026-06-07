@@ -1,17 +1,39 @@
 document.querySelectorAll('[data-target]').forEach(e=>{
-e.onclick=()=>{
-document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-document.getElementById(e.dataset.target).classList.add('active');
-if(e.dataset.target==='letterPg') type();
-}
+    e.onclick=()=>{
+
+        document.querySelectorAll('.page').forEach(p=>{
+            p.classList.remove('active');
+        });
+
+        document.getElementById(e.dataset.target)
+                .classList.add('active');
+        if(e.dataset.target === 'p1'){
+
+            document.getElementById("typed").textContent = "";
+
+            document.getElementById("footerCredit")
+                    .classList.remove("show");
+
+            document.getElementById("finalBtn")
+                    .classList.remove("show");
+        }
+
+        if(e.dataset.target==='letterPg'){
+            type();
+        }
+
+        if(e.dataset.target==='ending'){
+            startEnding();
+        }
+    }
 });
 document.getElementById('music').onclick=()=>{
 let a=document.getElementById('bgm');
 a.paused?a.play():a.pause();
 }
-let started=false;
+
 function type(){
-if(started)return;started=true;
+
 let txt=`Hey Kutta 💗,
 
 There are some people who come into our lives and become a part of it without us even realizing it. Somehow, you became one of those people for me.
@@ -31,9 +53,81 @@ document.getElementById('typed').textContent += txt[i++];
 if(i >= txt.length){
     clearInterval(t);
 
-    // Show footer after typing completes
     document.getElementById("footerCredit")
             .classList.add("show");
+
+    setTimeout(()=>{
+        document.getElementById("finalBtn")
+                .classList.remove("hidden");
+
+        document.getElementById("finalBtn")
+                .classList.add("show");
+    },1500);
 }
 },35);
+}
+const photos = document.querySelectorAll('.pola');
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{
+    threshold:0.15
+});
+
+photos.forEach(photo=>{
+    observer.observe(photo);
+});
+function startEnding(){
+    document.getElementById("restartBtn")
+        .classList.remove("show");
+    const ids = [
+        "line1",
+        "line2",
+        "line3",
+        "line4",
+        "line5",
+        "line6"
+    ];
+
+    ids.forEach(id=>{
+        document.getElementById(id).classList.add("hidden");
+    });
+
+    document.getElementById("line1").classList.remove("hidden");
+
+    setTimeout(()=>{
+        line1.classList.add("hidden");
+        line2.classList.remove("hidden");
+    },2000);
+
+    setTimeout(()=>{
+        line2.classList.add("hidden");
+        line3.classList.remove("hidden");
+    },4000);
+
+    setTimeout(()=>{
+        line3.classList.add("hidden");
+        line4.classList.remove("hidden");
+    },6500);
+
+    setTimeout(()=>{
+        line4.classList.add("hidden");
+        line5.classList.remove("hidden");
+    },9500);
+
+    setTimeout(()=>{
+        line6.classList.remove("hidden");
+    },12500);
+
+    setTimeout(()=>{
+        document.getElementById("restartBtn")
+                .classList.remove("hidden");
+
+        document.getElementById("restartBtn")
+                .classList.add("show");
+    },14000);
 }
