@@ -1,0 +1,127 @@
+Gomathi Natchiar D
+Software Developer
+
+TIRUNELVELI, India 627002
++918825570931
+gomathinatchiar1@gmail.com
+LinkedIn: Www.linkedin.com/in/gomathi-natchiar-8b5687337
+
+Skills
+
+Python
+
+Javascript
+
+SQL expertise
+
+SQL
+
+Front-end development
+
+Object-oriented programming
+
+C
+
+Git version control
+
+Machine learning algorithms
+
+Deep learning
+
+Regression library management
+
+Problem-solving
+
+Languages
+
+English
+Intermediate (B1)
+			
+
+Hindi
+Beginner (A1)
+			
+
+Tamil
+Upper intermediate (B2)
+			
+
+Professional Summary
+
+Driven Computer Science student with foundational skills in Python, SQL, JavaScript, HTML, CSS, and Object-Oriented Programming. Focused on Artificial Intelligence, Machine Learning, and Data Analytics to address real-world challenges. Proficient in problem-solving, analytical thinking, and Git version control, with strong teamwork and communication abilities. Eager to leverage emerging technologies in innovative projects.
+
+Project Experience
+
+Remote
+Freaksearch AI
+
+Frontend Developer
+
+Contributed to the development of an AI-powered fake news detection system using machine learning techniques.
+
+Designed and developed the frontend interface for news input and prediction display.
+
+Integrated machine learning model outputs into the user interface.
+
+Collaborated on text preprocessing and data handling workflows.
+
+Used HTML, CSS, JavaScript, and Python to support application development.
+
+Focused on creating an intuitive and responsive user experience.
+
+Remote
+CAREVIA – Hospital and Patient Management Platform
+Frontend Developer
+
+Developed the frontend of a web application connecting hospitals and patients.
+
+Designed responsive and user-friendly interfaces using HTML, CSS, and JavaScript.
+
+Created modules for patient registration, appointment booking, and hospital information management.
+
+Improved usability through structured layouts and accessible navigation.
+
+Collaborated with team members to ensure seamless integration of frontend components.
+
+ATM Simulator Machine
+Developed a console-based ATM simulation system using JavaFX.
+
+Implemented core banking operations including balance inquiry, deposit, withdrawal, and transaction validation.
+
+Applied Object-Oriented Programming (OOP) principles for modular and maintainable code.
+
+Utilized exception handling and input validation to improve reliability.
+
+Strengthened understanding of Java programming and software development fundamentals
+
+Remote
+Machine Learning Mini Projects
+Built and trained machine learning models on small datasets for classification and prediction tasks.
+
+Performed data preprocessing, feature engineering, model training, and performance evaluation.
+
+Explored algorithms such as Linear Regression, Logistic Regression, Decision Trees, and K-Nearest Neighbors.
+
+Assisted a faculty mentor in a Tamil Manuscript Research project involving AI/ML-based text analysis and digitization support.
+
+Contributed to data preparation, text processing, and research experimentation activities.
+
+Gained practical experience in machine learning workflows, data analysis, and research methodologies
+
+Education
+
+St.Ignatius Convent Higher Secondary School Tirunelveli, India
+High School Diploma
+
+Anna University Regional Campus Tirunelveli Tirunelveli, India
+B.E Computer Science And Engineering
+
+Certifications
+
+Problem solving basic-Hackkerank
+
+Python problem solving-sololearn
+
+Data science and machine learning fundamentals-Guvi HCL
+
+Introduction to HTML-sololearn

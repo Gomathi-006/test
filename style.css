@@ -1,0 +1,816 @@
+body{
+    margin:0;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background:#fad7e3;
+    font-family:'Indie Flower',cursive;
+}
+
+/* ---------------- Pages ---------------- */
+
+.page{
+    display:none;
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    overflow:visible;
+}
+
+.active{
+    display:block;
+    animation:f .8s;
+}
+
+@keyframes f{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* ---------------- Background ---------------- */
+
+.checker{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:-1;
+
+    background:
+    linear-gradient(45deg,#f8bfd0 25%,transparent 25%),
+    linear-gradient(-45deg,#f8bfd0 25%,transparent 25%),
+    linear-gradient(45deg,transparent 75%,#f8bfd0 75%),
+    linear-gradient(-45deg,transparent 75%,#f8bfd0 75%);
+    background-size:180px 180px;
+    background-position:0 0,0 90px,90px -90px,-90px 0;
+    opacity:.45;
+}
+
+/* ---------------- Text ---------------- */
+
+.title,
+.sub,
+.scrapTitle{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    color:#a44a63;
+    top:15px;
+}
+
+.title{
+    margin-top:90px;
+    font-size:82px;
+}
+
+.sub{
+    font-size:52px;
+}
+
+.scrapTitle{
+    font-size:64px;
+    margin-top:20px;
+}
+
+/* ---------------- Buttons ---------------- */
+
+.next,
+.back{
+    position:fixed;
+    bottom:30px;
+    font-size:34px;
+    color:#532d3a;
+    cursor:pointer;
+    z-index:100;
+}
+
+.next{
+    right:40px;
+}
+
+.back{
+    left:30px;
+}
+
+/* ---------------- This is for you ---------------- */
+
+.camera{
+    position:absolute;
+    width:410px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-35%);
+    z-index:3;
+}
+
+.vinyl{
+    position:absolute;
+    width:300px;
+    left:58%;
+    top:29%;
+    z-index:2;
+}
+
+.paper{
+    position:absolute;
+    width:180px;
+    left:43%;
+    top:23%;
+    z-index:1;
+    opacity:.8;
+}
+
+.clap{
+    position:absolute;
+    width:250px;
+    left:22%;
+    top:35%;
+    z-index:1;
+}
+
+.star{
+    position:absolute;
+    width:250px;
+    left:39%;
+    top:70%;
+    z-index:2;
+}
+
+.ticket{
+    position:absolute;
+    width:230px;
+    left:56%;
+    top:67%;
+    z-index:2;
+}
+
+.leftnote,
+.rightnote{
+    position:absolute;
+    font-size:28px;
+    color:#3d2730;
+    z-index:4;
+}
+
+.leftnote{
+    left:60px;
+    top:380px;
+}
+
+.rightnote{
+    right:70px;
+    top:370px;
+}
+
+/* ---------------- Choose Page ---------------- */
+
+.choices{
+    display:flex;
+    justify-content:center;
+    gap:100px;
+    margin-top:120px;
+    position:relative;
+    z-index:3;
+}
+
+.choice{
+    width:170px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.choice:hover{
+    transform:scale(1.08) rotate(4deg);
+}
+
+/* ---------------- Bouquet ---------------- */
+
+.bouquet{
+    display:block;
+    margin:30px auto;
+    width:250px;
+    position:relative;
+    z-index:3;
+}
+
+.caption{
+    position:absolute;
+    width:260px;
+    font-size:28px;
+    color:#8a3e56;
+}
+
+.left{
+    left:60px;
+    top:280px;
+}
+
+.right{
+    right:60px;
+    top:280px;
+}
+
+/* ---------------- Memory Board ---------------- */
+
+.memory-board{
+    position:relative;
+    width:100%;
+    min-height:1500px;
+}
+
+
+/* ---------------- Polaroids ---------------- */
+.pola{
+    position:absolute;
+    background:white;
+    padding:8px 8px 15px 8px;  /* extra bottom space */
+    border-radius:4px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    transition:.3s;
+    overflow:hidden;
+}
+
+.pola img{
+    width:270px;      /* adjust to your liking */
+    height:auto;
+    display:block;
+    border-radius:2px;
+}
+
+.pola:hover{
+    transform:scale(1.08) rotate(0deg) !important;
+    z-index:100;
+}
+/* Row 1 */
+
+.p1{
+    top:20px;
+    left:100px;
+    transform:rotate(-8deg);
+}
+
+.p2{
+    top:20px;
+    left:450px;
+    transform:rotate(6deg);
+}
+
+.p3{
+    top:20px;
+    left:830px;
+    transform:rotate(-5deg);
+}
+
+.p4{
+    top:30px;
+    left:1180px;
+    transform:rotate(7deg);
+}
+
+/* Row 2 */
+
+.p5{
+    top:350px;
+    left:100px;
+    transform:rotate(5deg);
+}
+
+.p6{
+    top:500px;
+    left:470px;
+    transform:rotate(-7deg);
+}
+
+.p7{
+    top:490px;
+    left:820px;
+    transform:rotate(6deg);
+}
+
+.p8{
+    top:520px;
+    left:1200px;
+    transform:rotate(-5deg);
+}
+.p9{
+    top:900px;
+    left:120px;
+    transform:rotate(-6deg);
+}
+
+.p10{
+    top:880px;
+    left:500px;
+    transform:rotate(7deg);
+}
+
+.p11{
+    top:900px;
+    left:880px;
+    transform:rotate(-4deg);
+}
+
+.p12{
+    top:980px;
+    left:1230px;
+    transform:rotate(6deg);
+}
+.p13{
+    top:1250px;
+    left:100px;
+    transform:rotate(-5deg);
+}
+
+.p14{
+    top:1200px;
+    left:500px;
+    transform:rotate(6deg);
+}
+
+.p15{
+    top:1300px;
+    left:880px;
+    transform:rotate(-7deg);
+}
+
+.p16{
+    top:1360px;
+    left:1230px;
+    transform:rotate(5deg);
+}
+.p1{ animation-delay:0s; }
+.p2{ animation-delay:.5s; }
+.p3{ animation-delay:1s; }
+.p4{ animation-delay:1.5s; }
+.p5{ animation-delay:2s; }
+.p6{ animation-delay:2.5s; }
+.p7{ animation-delay:3s; }
+.p8{ animation-delay:3.5s; }
+@keyframes float1{
+    0%,100%{ transform:rotate(-10deg) translateY(0px); }
+    50%{ transform:rotate(-10deg) translateY(-12px); }
+}
+
+@keyframes float2{
+    0%,100%{ transform:rotate(8deg) translateY(0px); }
+    50%{ transform:rotate(8deg) translateY(-10px); }
+}
+
+@keyframes float3{
+    0%,100%{ transform:rotate(-6deg) translateY(0px); }
+    50%{ transform:rotate(-6deg) translateY(-14px); }
+}
+
+@keyframes float4{
+    0%,100%{ transform:rotate(10deg) translateY(0px); }
+    50%{ transform:rotate(10deg) translateY(-9px); }
+}
+
+@keyframes float5{
+    0%,100%{ transform:rotate(6deg) translateY(0px); }
+    50%{ transform:rotate(6deg) translateY(-12px); }
+}
+
+@keyframes float6{
+    0%,100%{ transform:rotate(-8deg) translateY(0px); }
+    50%{ transform:rotate(-8deg) translateY(-11px); }
+}
+
+@keyframes float7{
+    0%,100%{ transform:rotate(8deg) translateY(0px); }
+    50%{ transform:rotate(8deg) translateY(-13px); }
+}
+
+@keyframes float8{
+    0%,100%{ transform:rotate(-5deg) translateY(0px); }
+    50%{ transform:rotate(-5deg) translateY(-10px); }
+}
+.p1{ animation:float1 4s ease-in-out infinite; }
+.p2{ animation:float2 5s ease-in-out infinite; }
+.p3{ animation:float3 4.5s ease-in-out infinite; }
+.p4{ animation:float4 5.2s ease-in-out infinite; }
+.p5{ animation:float5 4.3s ease-in-out infinite; }
+.p6{ animation:float6 5s ease-in-out infinite; }
+.p7{ animation:float7 4.7s ease-in-out infinite; }
+.p8{ animation:float8 5.3s ease-in-out infinite; }
+.p9{ animation-delay:4s; }
+.p10{ animation-delay:4.5s; }
+.p11{ animation-delay:5s; }
+.p12{ animation-delay:5.5s; }
+
+@keyframes float9{
+    0%,100%{ transform:rotate(-7deg) translateY(0px); }
+    50%{ transform:rotate(-11px) translateY(-11px); }
+}
+
+@keyframes float10{
+    0%,100%{ transform:rotate(6deg) translateY(0px); }
+    50%{ transform:rotate(6deg) translateY(-13px); }
+}
+
+@keyframes float11{
+    0%,100%{ transform:rotate(-4deg) translateY(0px); }
+    50%{ transform:rotate(-4deg) translateY(-9px); }
+}
+
+@keyframes float12{
+    0%,100%{ transform:rotate(8deg) translateY(0px); }
+    50%{ transform:rotate(8deg) translateY(-12px); }
+}
+
+.p9{
+    animation:float9 4.8s ease-in-out infinite;
+}
+
+.p10{
+    animation:float10 5.4s ease-in-out infinite;
+}
+
+.p11{
+    animation:float11 4.6s ease-in-out infinite;
+}
+
+.p12{
+    animation:float12 5.1s ease-in-out infinite;
+}
+.p13{ animation:float1 5s ease-in-out infinite; }
+.p14{ animation:float2 4.8s ease-in-out infinite; }
+.p15{ animation:float3 5.2s ease-in-out infinite; }
+.p16{ animation:float4 4.9s ease-in-out infinite; }
+
+.pin{
+    position:absolute;
+    width:200px;              /* Bigger */
+    left:30px;
+    top:10px;
+    transform:rotate(-12deg); /* Tilt it */
+    z-index:10;
+    transition:all .3s ease;
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.18));
+}
+
+.pin-right{
+    width:190px;
+    right:90px;
+    top:420px;          /* slightly lower */
+    transform:rotate(8deg);
+}
+
+.pin:hover{
+    transform:rotate(-12deg) scale(1.08);
+}
+
+.letter{
+    position:relative;
+    margin:100px auto;
+    background:#fff8f4;
+    padding:30px;
+    border-radius:15px;
+    width:65%;
+    min-height:500px;
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+#typed{
+    font-family:'Caveat',cursive;
+    font-size:34px;
+    white-space:pre-wrap;
+    color:#744658;
+}
+
+/* ---------------- Music ---------------- */
+
+#music{
+    position:fixed;
+    top:18px;
+    right:18px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(6px);
+    font-size:26px;
+    cursor:pointer;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+    transition:all .3s ease;
+    z-index:999;
+}
+
+/* Hover */
+#music:hover{
+    transform:scale(1.12) rotate(12deg);
+    box-shadow:0 10px 25px rgba(0,0,0,.22);
+}
+
+/* Small floating animation */
+#music{
+    animation:musicFloat 3s ease-in-out infinite;
+}
+
+@keyframes musicFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-5px);
+    }
+}
+/* ---------------- Text Animation ---------------- */
+
+.animate-text{
+    overflow:hidden;
+    white-space:nowrap;
+    width:0;
+    animation:typing 2s steps(40,end) forwards;
+}
+
+
+@keyframes typing{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+.hearts::before,
+.hearts::after{
+    content:"💗";
+    position:absolute;
+    font-size:35px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.hearts::before{
+    left:20%;
+    top:25%;
+}
+
+.hearts::after{
+    right:22%;
+    top:60%;
+    animation-delay:2s;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+}
+
+.hero-photo{
+    position:absolute;
+    width:170px;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;          /* optional */
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:all .35s ease;
+    cursor:pointer;
+}
+.hero-photo:hover{
+    transform:scale(1.15) rotate(0deg) !important;
+    z-index:999;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.hp1{
+    top:100px;
+    left:120px;
+    animation:heroFloat1 4s ease-in-out infinite;
+}
+
+.hp2{
+    top:450px;
+    left:350px;
+    animation:heroFloat2 5s ease-in-out infinite;
+}
+
+.hp3{
+    top:130px;
+    right:150px;
+    animation:heroFloat3 4.5s ease-in-out infinite;
+}
+
+.hp4{
+    top:450px;
+    right:500px;
+    animation:heroFloat4 5.2s ease-in-out infinite;
+}
+.hp1{ transform:rotate(-8deg); }
+.hp2{ transform:rotate(5deg); }
+.hp3{ transform:rotate(8deg); }
+.hp4{ transform:rotate(-5deg); }
+@keyframes heroFloat1{
+    0%,100%{ transform:rotate(-8deg) translateY(0px); }
+    50%{ transform:rotate(-8deg) translateY(-12px); }
+}
+
+@keyframes heroFloat2{
+    0%,100%{ transform:rotate(5deg) translateY(0px); }
+    50%{ transform:rotate(5deg) translateY(-10px); }
+}
+
+@keyframes heroFloat3{
+    0%,100%{ transform:rotate(8deg) translateY(0px); }
+    50%{ transform:rotate(8deg) translateY(-14px); }
+}
+
+@keyframes heroFloat4{
+    0%,100%{ transform:rotate(-5deg) translateY(0px); }
+    50%{ transform:rotate(-5deg) translateY(-11px); }
+}
+/* First page only */
+#p1{
+    height: 100vh;
+    overflow: hidden;
+}
+.item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.item span{
+    font-size:24px;
+    color:#8a4d62;
+    font-family:'Caveat',cursive;
+}
+.choice:hover{
+    animation:wiggle .4s ease;
+}
+
+@keyframes wiggle{
+    0%{transform:rotate(0deg);}
+    25%{transform:rotate(-5deg);}
+    50%{transform:rotate(5deg);}
+    75%{transform:rotate(-3deg);}
+    100%{transform:rotate(0deg);}
+}
+.fall{
+    position:fixed;
+    top:-80px;
+    font-size:30px;
+    pointer-events:none;
+    z-index:1;
+    animation-name:fall;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+
+/* Different horizontal positions */
+.f1{ left:10%; animation-duration:10s; animation-delay:0s; }
+.f2{ left:25%; animation-duration:12s; animation-delay:2s; }
+.f3{ left:45%; animation-duration:9s; animation-delay:4s; }
+.f4{ left:65%; animation-duration:11s; animation-delay:1s; }
+.f5{ left:80%; animation-duration:13s; animation-delay:3s; }
+.f6{ left:90%; animation-duration:10s; animation-delay:5s; }
+
+
+@keyframes fall{
+    0%{
+        transform:translate(0,-100px) rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    25%{
+        transform:translate(20px,25vh) rotate(90deg);
+    }
+
+    50%{
+        transform:translate(-20px,50vh) rotate(180deg);
+    }
+
+    75%{
+        transform:translate(25px,75vh) rotate(270deg);
+    }
+
+    100%{
+        transform:translate(-15px,110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+.bow{
+    position:absolute;
+    font-size:55px;
+    opacity:.9;
+}
+
+.bow1{
+    top:120px;
+    left:120px;
+    transform:rotate(-15deg);
+}
+
+.bow2{
+    top:120px;
+    right:120px;
+    transform:rotate(15deg);
+}
+.doodle{
+    position:absolute;
+    color:rgb(16, 15, 15);
+    font-size:50px;
+    z-index:5;      /* Above the bouquet */
+    opacity:.9;
+    text-shadow:0 0 10px white;
+}
+
+.d1{
+    top:250px;
+    left:32%;
+}
+
+.d2{
+    top:100px;
+    right:30%;
+}
+
+.d3{
+    top:520px;
+    left:13%;
+}
+
+.d4{
+    top:520px;
+    right:13%;
+}
+.flowerNote{
+    text-align:center;
+    font-family:'Caveat',cursive;
+    font-size:28px;
+    color:#9b5a72;
+    margin-top:15px;
+}
+.bouquet{
+    animation:bloom 3s ease-in-out infinite;
+}
+
+@keyframes bloom{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+.tape{
+    position:absolute;
+    width:70px;
+    height:22px;
+    background:rgba(255,255,255,.45);
+    left:70px;
+    top:6px;
+    transform:rotate(-15deg);
+    border-radius:3px;
+    z-index:11;
+    backdrop-filter:blur(2px);
+}
+.pin-right{
+    position:absolute;
+    width:220px;
+    right:20px;
+    top:10px;
+    transform:rotate(12deg);
+    z-index:10;
+    transition:all .3s ease;
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.18));
+}
+
+.pin-right:hover{
+    transform:rotate(12deg) scale(1.08);
+}
+.tape-right{
+    position:absolute;
+    width:70px;
+    height:22px;
+    background:rgba(255,255,255,.45);
+    right:80px;
+    top:6px;
+    transform:rotate(15deg);
+    border-radius:3px;
+    z-index:11;
+    backdrop-filter:blur(2px);
+}
+.footer-credit{
+    text-align:center;
+    margin-top:30px;
+    font-family:'Caveat', cursive;
+    font-size:24px;
+    color:#9b5a72;
+    opacity:0;
+    transform:translateY(15px);
+    transition:all .8s ease;
+}
+
+.footer-credit.show{
+    opacity:.85;
+    transform:translateY(0);
+}
