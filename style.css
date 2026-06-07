@@ -1002,59 +1002,57 @@ body{
     }
         /* ---------- First Page ---------- */
 
-    .camera{
-        width:260px;
-        top:51%;
-        left:55%
-    }
+  #p2{
+    overflow-y:auto;
+}
 
-    .vinyl{
-        width:190px;
-        left:62%;
-        top:38%;
-    }
+.paper{
+    width:180px;
+    left:50%;
+    top:180px;
+    transform:translateX(-50%);
+}
 
-    .paper{
-        width:120px;
-        left:37%;
-        top:32%;
-    }
+.camera{
+    width:110px;
+    left:40px;
+    top:350px;
+}
 
-    .clap{
-        width:180px;
-        left:0%;
-        top:38%;
-    }
+.vinyl{
+    width:110px;
+    right:40px;
+    top:350px;
+}
 
-    .star{
-        width:160px;
-        left:24%;
-        top:64%;
-    }
+.clap{
+    width:100px;
+    left:50%;
+    top:500px;
+    transform:translateX(-50%);
+}
 
-    .ticket{
-        width:140px;
-        left:57%;
-        top:63%;
-    }
+.ticket{
+    width:90px;
+    left:60px;
+    top:620px;
+}
 
-   .leftnote,
-    .rightnote{
-        position:static;
-        text-align:center;
-        font-size:22px;
-        margin-top:20px;
-    }
+.star{
+    width:90px;
+    right:60px;
+    top:620px;
+}
 
-    .leftnote{
-        left:300px;
-        top:140px;
-    }
+.leftnote{
+    top:760px;
+    left:20px;
+}
 
-    .rightnote{
-        left:18px;
-        top:630px;
-    }
+.rightnote{
+    top:760px;
+    right:20px;
+}
     
     /* ---------- Hero Photos ---------- */
 
