@@ -949,11 +949,12 @@ body{
 
     .title{
         font-size:4rem;
-        top:30px
+        top:10px;
     }
 
     .sub{
         font-size:2.3rem;
+        top:30px;
     }
 
     .hp1{transform:rotate(-6deg)!important;}
