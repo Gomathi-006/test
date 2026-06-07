@@ -11,8 +11,6 @@ document.querySelectorAll('[data-target]').forEach(e=>{
 
             document.getElementById("typed").textContent = "";
 
-            document.getElementById("footerCredit")
-                    .classList.remove("show");
 
             document.getElementById("finalBtn")
                     .classList.remove("show");
@@ -45,7 +43,7 @@ I don't think I say this often, but I'm genuinely grateful for you—for your ki
 No matter where life takes us or how much things change, I hope you always know that you'll always have a very special place in my heart ♡
 
 And finally, Happy Birthday once again !!May you always be surrounded by love, laughter, and all the little things that make life beautiful. ♡
-                                            Happy 20!!`;
+Happy 20!!`;
 let i=0;
 let t=setInterval(()=>{
 document.getElementById('typed').textContent += txt[i++];
@@ -53,8 +51,7 @@ document.getElementById('typed').textContent += txt[i++];
 if(i >= txt.length){
     clearInterval(t);
 
-    document.getElementById("footerCredit")
-            .classList.add("show");
+    
 
     setTimeout(()=>{
         document.getElementById("finalBtn")
@@ -90,7 +87,8 @@ function startEnding(){
         "line3",
         "line4",
         "line5",
-        "line6"
+        "line6",
+        "line7"
     ];
 
     ids.forEach(id=>{
@@ -122,12 +120,14 @@ function startEnding(){
     setTimeout(()=>{
         line6.classList.remove("hidden");
     },12500);
-
+    setTimeout(()=>{
+        line7.classList.remove("hidden");
+    },14500);
     setTimeout(()=>{
         document.getElementById("restartBtn")
                 .classList.remove("hidden");
 
         document.getElementById("restartBtn")
                 .classList.add("show");
-    },14000);
+    },16500);
 }

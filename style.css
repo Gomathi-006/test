@@ -906,6 +906,13 @@ body{
         transform:translateY(0);
     }
 }
+.credit{
+    font-family:'Caveat',cursive;
+    font-size:40px;
+    color:#9b5a72;
+    margin-top:30px;
+    text-align:center;
+}
 /* ================================================= */
 /* MOBILE RESPONSIVE (DO NOT AFFECT DESKTOP) */
 /* ================================================= */
@@ -1000,9 +1007,12 @@ body{
         top:63%;
     }
 
-    .leftnote,
+   .leftnote,
     .rightnote{
-        font-size:20px;
+        position:static;
+        text-align:center;
+        font-size:22px;
+        margin-top:20px;
     }
 
     .leftnote{
@@ -1022,28 +1032,12 @@ body{
         height:130px;
     }
 
-    .hp1{
-        top:250px;
-        left:30px;
-        width:140px;
+    .hp1,.hp3{
+        top:320px;
     }
 
-    .hp2{
-        top:500px;
-        left:30px;
-        width:150px;
-    }
-
-    .hp3{
-        top:250px;
-        right:28px;
-        width:160px;
-    }
-
-    .hp4{
-        top:500px;
-        right:28px;
-        width:150px;
+    .hp2,.hp4{
+        top:560px;
     }
 
     /* ---------- Choice Page ---------- */
@@ -1226,8 +1220,8 @@ body{
     #finalBtn{
         left:50%;
         right:auto;
-        bottom:10px;
-
+        bottom:100px;
+       font-size:20px;
         opacity:0;
         pointer-events:none;
 
@@ -1278,5 +1272,8 @@ body{
         right:20px;
         bottom:20px;
     }
-
+    .credit{
+        font-size:28px;
+        padding:0 20px;
+    }
 }
