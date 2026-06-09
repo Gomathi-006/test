@@ -71,7 +71,7 @@ body{
 
 .scrapTitle{
     font-size:64px;
-    margin-top:20px;
+    
 }
 
 /* ---------------- Buttons ---------------- */
@@ -96,14 +96,15 @@ body{
 #finalBtn{
     opacity:0;
     pointer-events:none;
-    transform:translateY(20px);
-    transition:all 1.2s ease;
+    transform:translateY(30px) scale(.9);
+    transition:all .8s ease;
+    display: block;
 }
 
 #finalBtn.show{
     opacity:1;
     pointer-events:auto;
-    transform:translateY(0);
+    transform:translateY(0) scale(1);
 }
 
 /* ---------------- This is for you ---------------- */
@@ -145,7 +146,7 @@ body{
 .star{
     position:absolute;
     width:250px;
-    left:39%;
+    left:36%;
     top:70%;
     z-index:2;
 }
@@ -153,7 +154,7 @@ body{
 .ticket{
     position:absolute;
     width:230px;
-    left:56%;
+    left:53%;
     top:67%;
     z-index:2;
 }
@@ -245,7 +246,7 @@ body{
 }
 
 .pola img{
-    width:270px;      /* adjust to your liking */
+    width:280px;      /* adjust to your liking */
     height:auto;
     display:block;
     border-radius:2px;
@@ -292,9 +293,10 @@ body{
 /* Row 2 */
 
 .p5{
-    top:350px;
+    top:470px;
     left:100px;
     transform:rotate(5deg);
+    
 }
 
 .p6{
@@ -315,7 +317,7 @@ body{
     transform:rotate(-5deg);
 }
 .p9{
-    top:900px;
+    top:800px;
     left:120px;
     transform:rotate(-6deg);
 }
@@ -338,19 +340,19 @@ body{
     transform:rotate(6deg);
 }
 .p13{
-    top:1250px;
+    top:1300px;
     left:100px;
     transform:rotate(-5deg);
 }
 
 .p14{
-    top:1200px;
+    top:1250px;
     left:500px;
     transform:rotate(6deg);
 }
 
 .p15{
-    top:1300px;
+    top:1350px;
     left:880px;
     transform:rotate(-7deg);
 }
@@ -923,48 +925,53 @@ body{
         overflow-x:hidden;
     }
 
-    .hero-gallery{
+   .hero-gallery{
         display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:15px;
-        width:90%;
-        margin:30px auto;
-        justify-items:center;
+        grid-template-columns:repeat(2,140px);
+        justify-content:center;
+        column-gap:70px;   /* space between left and right photos */
+        row-gap:48px;      /* space between top and bottom rows */
     }
 
     .hero-photo{
         position:static !important;
         width:130px;
-        height:130px;
+        height:170px;
         object-fit:cover;
-        transform:rotate(0deg) !important;
+        transition:.3s;
     }
 
-    .hp1,.hp2,.hp3,.hp4{
-        top:auto;
-        left:auto;
-        right:auto;
-        bottom:auto;
+    
+    .hp1{
+        transform:rotate(-5deg) translateY(-8px);
     }
 
+    .hp2{
+        transform:rotate(4deg) translateY(8px);
+    }
+
+    .hp3{
+        transform:rotate(3deg) translateY(-5px);
+    }
+
+    .hp4{
+        transform:rotate(-4deg) translateY(10px);
+    }
     .title{
-        font-size:4rem;
-        top:10px;
+        font-size:3rem;
+        margin-top:50px;
     }
 
     .sub{
-        font-size:2.3rem;
-        top:15px;
+        font-size:1.8rem;
+        top:0px;
     }
 
-    .hp1{transform:rotate(-6deg)!important;}
-    .hp2{transform:rotate(6deg)!important;}
-    .hp3{transform:rotate(-4deg)!important;}
-    .hp4{transform:rotate(4deg)!important;}
+   
 
     .scrapTitle{
         font-size:38px;
-        top:30px;
+        top:13px;
     }
 
     .next,
@@ -1002,57 +1009,76 @@ body{
     }
         /* ---------- First Page ---------- */
 
-  #p2{
-    overflow-y:auto;
-}
+     #p2{
+        min-height:100vh;
+        position:relative;
+        overflow:hidden;
+    }
 
-.paper{
-    width:180px;
-    left:50%;
-    top:180px;
-    transform:translateX(-50%);
-}
+    /* Center card */
+    .paper{
+        width:100px;
+        left:49%;
+        top:35%;
+        transform:translateX(-50%);
+        z-index: 3;
+    }
 
-.camera{
-    width:110px;
-    left:40px;
-    top:350px;
-}
+    .camera{
+        width:190px;
+        left:55%;
+        top:52%;
+        transform:translate(-50%,-50%);
+        z-index:5;
+    }
 
-.vinyl{
-    width:110px;
-    right:40px;
-    top:350px;
-}
+    .clap{
+        width:130px;
+        left:1%;
+        top:38%;
+        z-index:2;
+    }
 
-.clap{
-    width:100px;
-    left:50%;
-    top:500px;
-    transform:translateX(-50%);
-}
+    .vinyl{
+        width:140px;
+        left:60%;
+        top:39%;
+        z-index:2;
+    }
 
-.ticket{
-    width:90px;
-    left:60px;
-    top:620px;
-}
+    .star{
+        width:140px;
+        left:24%;
+        top:59%;
+        z-index:2;
+    }
 
-.star{
-    width:90px;
-    right:60px;
-    top:620px;
-}
+    .ticket{
+        width:120px;
+        left:58%;
+        top:58%;
+        z-index:2;
+    }
 
-.leftnote{
-    top:760px;
-    left:20px;
-}
+    .leftnote{
+        position:absolute;
+        top:80%;
+        left:25%;
+        transform:translateX(-50%);
+        width:90%;
+        text-align:center;
+        font-size:18px;
+    }
 
-.rightnote{
-    top:760px;
-    right:20px;
-}
+    .rightnote{
+        position:absolute;
+        top:18%;
+        left:70%;
+        transform:translateX(-50%);
+        width:90%;
+        text-align:center;
+        font-size:18px;
+    }
     
     /* ---------- Hero Photos ---------- */
 
@@ -1183,6 +1209,7 @@ body{
     .tape-right{
         width:45px;
         height:16px;
+        display: none;
     }
 
     /* ---------- Decorations ---------- */
